@@ -1,0 +1,7 @@
+*.swp
+*.pyc
+.DS_Store
+.htaccess
+.idea
+trunk
+target
