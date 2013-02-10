@@ -1,0 +1,21 @@
+{
+  "name": "trodrigues.net",
+  "version": "0.0.0",
+  "description": "trodrigues.net source",
+  "main": "grunt.js",
+  "dependencies": {
+    "grunt-contrib-less": "~0.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/trodrigues/trodrigues.net.git"
+  },
+  "author": "Tiago Rodrigues",
+  "license": "BSD",
+  "gitHead": "384d65b7a54d1548e4130458fe8cc343394544b0",
+  "readmeFilename": "README.md"
+}
