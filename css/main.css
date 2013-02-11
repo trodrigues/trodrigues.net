@@ -2691,5 +2691,5 @@ main {
 .content-container {
   background-color: blue;
   opacity: 0.5;
-  overflow: scroll;
+  overflow-y: scroll;
 }
