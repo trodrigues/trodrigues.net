@@ -1,18 +1,38 @@
+@import "bootstrap/bootstrap.less";
+
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  height: 100%;
+}
+
 main {
   display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
-.container-fluid {
-  padding-right: 0;
-  padding-left: 0;
+.top-to-bottom {
+  height: 100%;
 }
 
-.sidebar {
+.sidebar-container {
   background-color: yellow;
   opacity: 0.5;
 }
 
-.content{
+.sidebar {
+}
+
+.content-container {
   background-color: blue;
   opacity: 0.5;
+  overflow: scroll;
 }
+
