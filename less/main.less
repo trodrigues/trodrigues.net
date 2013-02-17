@@ -1,5 +1,6 @@
 @import "bootstrap/bootstrap.less";
 
+
 html {
   min-height: 100%;
   position: relative;
@@ -23,16 +24,57 @@ main {
 }
 
 .sidebar-container {
-  background-color: yellow;
-  opacity: 0.5;
+  background-color: @grayDark;
+  font-family: @sidebarFontFamily;
+  //font-family: 'Dosis', sans-serif;
+  //font-family: 'Inconsolata', sans-serif;
+  //font-family: 'Anonymous Pro', sans-serif;
+}
+
+.sidebar, .content {
+  padding-top: @baseLineHeight;
 }
 
 .sidebar {
+  color: @blueLight;
+}
+
+.sidebar h1 {
+  font-size: 1.0em;
+}
+
+.sidebar a {
+  color: @blueLight;
 }
 
 .content-container {
-  background-color: blue;
-  opacity: 0.5;
   overflow-y: scroll;
+  background-color: @grayLighter2;
+  font-family: @sansFontFamily;
 }
 
+.content {
+  margin-left: 100px;
+  width: 650px;
+}
+
+.content article {
+  padding-bottom: 30px;
+  margin-bottom: 60px;
+  border-bottom: 1px dotted @black;
+}
+
+.content article:last-child {
+  border-bottom: none;
+}
+
+.content p {
+  line-height: 1.6em;
+  font-size: 1.3em;
+  margin-bottom: 2em;
+}
+
+.content .meta {
+  font-size: 1em;
+  font-style: oblique;
+}
