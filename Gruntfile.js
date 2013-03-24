@@ -15,11 +15,11 @@ module.exports = function(grunt) {
         'templates/**',
         'config.json'
       ],
-      tasks: ['less', 'exec:wintersmith']
+      tasks: ['less', 'exec:wintersmithPreview']
     },
 
     exec: {
-      wintersmith: {
+      wintersmithPreview: {
         cmd: 'wintersmith preview'
       }
     },
@@ -30,10 +30,17 @@ module.exports = function(grunt) {
           'css/main.css': 'less/main.less'
         }
       }
-    }
+    },
+
+    clean: [
+      'css/main.css',
+      'build'
+    ]
   });
 
   // Default task.
-  grunt.registerTask('default', 'less');
+  grunt.registerTask('default', ['clean', 'build']);
+  grunt.registerTask('preview', 'exec:wintersmithPreview');
+  grunt.registerTask('build', ['less' 'exec:wintersmithBuild']);
 
 };
