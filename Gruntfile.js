@@ -21,6 +21,10 @@ module.exports = function(grunt) {
     exec: {
       wintersmithPreview: {
         cmd: 'wintersmith preview'
+      },
+
+      publish: {
+        cmd: 'git push deploy master'
       }
     },
 
@@ -41,6 +45,6 @@ module.exports = function(grunt) {
   // Default task.
   grunt.registerTask('default', ['clean', 'build']);
   grunt.registerTask('preview', 'exec:wintersmithPreview');
-  grunt.registerTask('build', ['less' 'exec:wintersmithBuild']);
+  grunt.registerTask('build', ['less', 'exec:wintersmithBuild']);
 
 };
