@@ -1,0 +1,9 @@
+{
+  "locals": {
+    "url": "http://localhost:8080",
+    "name": "trodrigues.net",
+    "owner": "Tiago Rodrigues",
+    "description": "",
+    "index_articles": 3
+  }
+}

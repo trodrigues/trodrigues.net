@@ -4,7 +4,10 @@
   "description": "trodrigues.net source",
   "main": "grunt.js",
   "dependencies": {
-    "grunt-contrib-less": "~0.3.2"
+    "grunt-contrib-less": "~0.5.0",
+    "grunt-exec": "~0.4.0",
+    "grunt-contrib-watch": "~0.3.1",
+    "grunt": "~0.4.1"
   },
   "devDependencies": {},
   "scripts": {
