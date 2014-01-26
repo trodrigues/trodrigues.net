@@ -5,7 +5,8 @@
   "main": " ",
   "private": true,
   "scripts": {
-    "build": "harp compile"
+    "build": "harp compile && npm run-script rssfeed",
+    "rssfeed": "json2rss public/articles/_data.json www/feed.xml --title 'Tiago Rodrigues blog' --feedUrl 'http://trodrigues.net/feed.xml' --siteUrl='http://trodrigues.net' --author='Tiago Rodrigues' --itemSuffix='.html' --itemPrefix='articles/' --itemsPath='www/articles' --itemSelector='article section'"
   },
   "repository": {
     "type": "git",
