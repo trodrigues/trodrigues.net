@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Tiago Rodrigues blog]]></title>
+        <description><![CDATA[Tiago Rodrigues blog]]></description>
+        <link>http://trodrigues.net</link>
+        <generator>json2rss - https://github.com/trodrigues/json2rss</generator>
+        <lastBuildDate>Sun, 26 Jan 2014 22:09:01 GMT</lastBuildDate>
+        <atom:link href="http://trodrigues.net/feed.xml" rel="self" type="application/rss+xml"/>
+        <author><![CDATA[Tiago Rodrigues]]></author>
+        <pubDate>Sun, 26 Jan 2014 22:09:01 GMT</pubDate>
+        <item>
+            <title><![CDATA[hello world]]></title>
+            <description><![CDATA[<p>First post on my brand new website.</p>
+]]></description>
+            <link>http://trodrigues.net/articles/2014/01/hello-world.html</link>
+            <guid isPermaLink="false">
+                2014/01/hello-world            </guid>
+            <dc:creator><![CDATA[Tiago Rodrigues]]></dc:creator>
+            <pubDate>Sun, 26 Jan 2014 21:42:45 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
