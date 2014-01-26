@@ -1,14 +1,4 @@
 {
-  "heisenberg": {
-    "title": "Heisenberg",
-    "date": "2014-01-24T18:00"
-  },
-  "fring": {
-    "title": "Gus Fring",
-    "date": "2014-01-25T20:00"
-  },
-  "jesse": {
-    "title": "Jesse",
-    "date": "2014-01-26T10:00"
-  }
+  "list": [
+  ]
 }

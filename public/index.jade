@@ -1,8 +1,8 @@
 h2 writing
 
 ul.article-list
-  for article, slug in public.articles._data
+  for article in public.articles._data.list
     li
-      a(href="/articles/#{ slug }.html")= article.title
+      a(href="/articles/#{ article.slug }.html")= article.title
       &ndash;
       != partial('_date', {articleDate: article.date})

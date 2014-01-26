@@ -1,5 +1,4 @@
-- var splitDateTime = articleDate.split('T')
-- var time = splitDateTime[1]
-- var date = splitDateTime[0].split('-')
-- var formattedDate = date[2]+' '+months[date[1]]+' '+date[0]
-time(datetime="article.date")!= time+' &dash; '+formattedDate
+- var dateTime = new Date(articleDate);
+- var time = dateTime.toTimeString().split(':');
+- var date = dateTime.getDate()+' '+months[dateTime.getMonth()+1]+' '+dateTime.getFullYear();
+time(datetime="articleDate")!= time[0]+':'+time[1]+' &dash; '+date

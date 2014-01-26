@@ -16,6 +16,11 @@ html
           a(href="/about.html") about
     main
       if current.path[0] == 'articles'
-        != partial("_article", {article: public.articles._data[current.path[1]]})
+        - var currentPath = current.path[1]+'/'+current.path[2]+'/'+current.path[3];
+        - var article = public.articles._data.list.filter(function(val){return val.slug === currentPath})[0];
+        if article
+          != partial("_article", {article: article})
+        else
+          != partial("404")
       else
         != yield
