@@ -1,0 +1,20 @@
+{
+  "name": "trodrigues.net",
+  "version": "0.0.0",
+  "description": "",
+  "main": " ",
+  "private": true,
+  "scripts": {
+    "build": "harp compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/trodrigues/trodrigues.net.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trodrigues/trodrigues.net/issues"
+  },
+  "homepage": "https://github.com/trodrigues/trodrigues.net"
+}

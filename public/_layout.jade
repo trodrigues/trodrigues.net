@@ -2,17 +2,20 @@ doctype
 html
   head
     link(rel="stylesheet", href="/css/main.css")
-    //link(href="http://fonts.googleapis.com/css?family=Asap|Raleway|Dosis|Inconsolata|Anonymous+Pro", rel="stylesheet", type="text/css")
     link(href="http://fonts.googleapis.com/css?family=Asap|Inconsolata|Raleway", rel="stylesheet", type="text/css")
 
   body
-    h1.main-title Hi there, I'm Tiago.
+    h1.main-title
+      a(href="/") Hi there, I'm Tiago.
     nav.main-nav
       ul
         li
           a(href="/") writing
           span /
         li
-          a(href="/about") about
+          a(href="/about.html") about
     main
-      != yield
+      if current.path[0] == 'articles'
+        != partial("_article")
+      else
+        != yield
