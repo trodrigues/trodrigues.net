@@ -1,8 +1,8 @@
 h2 writing
 
-ul
+ul.article-list
   for article, slug in public.articles._data
     li
       a(href="/articles/#{ slug }.html")= article.title
-      &dash;
-      span= article.date
+      &ndash;
+      != partial('_date', {articleDate: article.date})

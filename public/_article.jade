@@ -1,5 +1,5 @@
 article
   h2= title
-  p= date
+  != partial('_date', {articleDate: article.date})
   section
     != yield
