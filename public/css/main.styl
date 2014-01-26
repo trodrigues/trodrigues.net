@@ -1,0 +1,70 @@
+@import "_variables.styl"
+@import "_nib"
+
+global-reset()
+html5-reset()
+
+body
+  box-sizing: border-box
+  font-size: main-font-size
+  font-family: main-font-family
+  padding: 50px
+
+pre, code
+  font-family: monospace-font-family
+
+h1, h2, h3, h4, h5, h6
+  font-family: title-font-family
+
+h1
+  font-size: 3em
+
+h2
+  font-size: 2.5em
+
+h3
+  font-size: 2em
+
+.main-title
+  margin-bottom: 1em
+
+.main-nav
+  position: fixed
+  margin-left: 50em
+  margin-top: 0.4em
+  font-size: 1.3em
+  li
+    display: inline
+  span
+    margin: 0px 4px
+  a
+    color: rgb(50,50,50)
+    background: rgb(207,207,207)
+  a:hover
+    background: none
+    text-decoration: none
+
+main
+  width: 50em
+
+  h2
+    margin-bottom: 0.5em
+
+  p, dl
+    line-height: 1.5em
+    margin-bottom: 0.8em
+    font-size: 1.2em
+
+  a
+    color: rgb(100, 100, 100)
+  a:hover
+    text-decoration: none
+
+  dl
+    display: block
+    overflow: hidden
+  dt, dd
+    float: left
+  dt
+    clear: left
+    margin-right: 0.2em

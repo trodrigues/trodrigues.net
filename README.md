@@ -1,4 +1,0 @@
-trodrigues.net
-==============
-
-Personal website
