@@ -2,6 +2,7 @@ doctype
 html
   head
     link(rel="stylesheet", href="/css/main.css")
+    link(rel="stylesheet", href="/css/prism.css")
     link(href="http://fonts.googleapis.com/css?family=Asap|Inconsolata|Raleway", rel="stylesheet", type="text/css")
     if environment == 'production'
       script.
@@ -29,3 +30,4 @@ html
           != partial("404")
       else
         != yield
+    script(src="/js/prism.js")
