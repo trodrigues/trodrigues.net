@@ -1,5 +1,23 @@
 article
   h2= article.title
   != partial('_date', {articleDate: article.date})
-  section
+  section.article-text
     != yield
+  hr
+  section.comments-cover
+    p.
+      All comments are subject to approval. Remember that comments on
+      the internet are not always the best of things, so if you're sure
+      you want to go ahead, push the button:
+    button Ok, I want to read the comments
+  section.comments.hidden
+    div#disqus_thread
+    script.
+      var disqus_shortname = 'trodrigues';
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  
+
