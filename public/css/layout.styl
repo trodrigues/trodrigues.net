@@ -11,7 +11,7 @@
   font-size: 1.3rem
   @media mobile-landscape
     right: auto
-    left: 2%
+    left: mobile-margin
     top: 3.4rem
     font-size: 1rem
   li
@@ -28,6 +28,8 @@
 .article-list
   font-size: 1.3rem
   margin-left: 1.5rem
+  @media mobile-landscape
+    font-size: 1rem
   li
     list-style-type: disc
     margin-bottom: 0.5rem
@@ -42,6 +44,7 @@ article
     margin-bottom: 1.5rem
     font-style: italic
     color: rgb(120, 120, 120)
+
 .article-text, hr
   margin-bottom: 4rem
   h3
