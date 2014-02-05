@@ -1,5 +1,5 @@
 .main-title
-  margin-bottom: 1rem
+  margin-bottom: 3rem
   a, a:hover
     color: black
     text-decoration: none
@@ -9,6 +9,11 @@
   right: 0.7rem
   top: 0.4rem
   font-size: 1.3rem
+  @media mobile-landscape
+    right: auto
+    left: 2%
+    top: 3.4rem
+    font-size: 1rem
   li
     display: inline
   span
@@ -19,31 +24,6 @@
   a:hover
     background: none
     text-decoration: none
-
-main
-  width: 50rem
-
-  h2
-    margin-bottom: 0.5rem
-
-  p, dl
-    line-height: 1.5rem
-    margin-bottom: 0.8rem
-    font-size: 1.2rem
-
-  a
-    color: rgb(100, 100, 100)
-  a:hover
-    text-decoration: none
-
-  dl
-    display: block
-    overflow: hidden
-  dt, dd
-    float: left
-  dt
-    clear: left
-    margin-right: 0.2rem
 
 .article-list
   font-size: 1.3rem
@@ -62,8 +42,11 @@ article
     margin-bottom: 1.5rem
     font-style: italic
     color: rgb(120, 120, 120)
-  .article-text, hr
-    margin-bottom: 60px
+.article-text, hr
+  margin-bottom: 4rem
+  h3
+    margin-top: 2.5rem
+    margin-bottom: 1rem
 
 .comments-cover
   font-style: italic

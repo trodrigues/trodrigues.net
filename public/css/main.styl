@@ -10,8 +10,15 @@ body
   font-size: main-font-size
   font-family: main-font-family
   position: relative
-  width: 60rem
   margin: 50px auto
+  max-width: 850px
+  @media tablet-portrait
+    max-width: 600px
+  @media mobile-landscape
+    max-width: mobile-lw
+    margin: 15px auto
+  @media mobile-portrait
+    max-width: mobile-pw
 
 pre, code
   font-family: monospace-font-family
@@ -21,15 +28,60 @@ h1, h2, h3, h4, h5, h6
 
 h1
   font-size: 3rem
+  @media mobile-landscape
+    font-size: 2.5rem
+  @media mobile-landscape
+    font-size: 2.2rem
 
 h2
   font-size: 2.5rem
+  @media mobile-landscape
+    font-size: 2rem
+  @media mobile-landscape
+    font-size: 1.8rem
 
 h3
   font-size: 2rem
+  @media mobile-landscape
+    font-size: 1.5rem
+  @media mobile-landscape
+    font-size: 1.3rem
 
 hr
   border-style: solid
+
+main
+  max-width: 700px
+  @media tablet-portrait
+    width: 100%
+  @media mobile-landscape
+    width: 95%
+    margin-left: 2%
+
+  h2
+    margin-bottom: 0.5rem
+
+  p, dl
+    font-size: 1.1rem
+    line-height: 1.5rem
+    margin-bottom: 0.8rem
+    padding-left: 0.3rem
+
+  a
+    color: rgb(100, 100, 100)
+  a:hover
+    text-decoration: none
+
+  dl
+    display: block
+    overflow: hidden
+  dt, dd
+    float: left
+  dt
+    clear: left
+    margin-right: 0.2rem
+  dd
+    margin-left: 4.5rem
 
 @import "utils.styl"
 @import "layout.styl"
