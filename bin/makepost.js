@@ -1,12 +1,15 @@
 #!/usr/bin/env node
-var argv = require('optimist').argv;
+var prompt = require('sync-prompt').prompt;
 var fs = require('fs');
 var slug = require('to-slug-case');
 var mkdirp = require('mkdirp');
-var dataFilePath = 'public/articles/_data.json';
-var articles = JSON.parse(fs.readFileSync(dataFilePath, 'utf-8'));
+var common = require('../lib/common');
+var articles = common.getArticles();
 
-var title = argv._.join(' ');
+var title
+while(!title) {
+  title = prompt('Article title: ');
+}
 var slug = slug(title);
 var date = (new Date).toISOString();
 var splitDate = date.split('-');
@@ -19,10 +22,10 @@ var newArticle = {
 
 articles.list.unshift(newArticle);
 
-var articleDatePath = 'public/articles/'+datePath;
+var articleDatePath = common.articlesPath + datePath;
 mkdirp.sync(articleDatePath);
 var articleFile = articleDatePath + slug +'.md';
 fs.writeFileSync(articleFile, '');
-fs.writeFileSync(dataFilePath, JSON.stringify(articles, null, '  '));
+common.writeArticlesFile(articles);
 console.log('Created article file:');
 console.log(articleFile);
