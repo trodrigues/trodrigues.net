@@ -262,7 +262,7 @@ have many small containers for each service.
 
 ### In conclusion
 
-This is was an interesting experiment but until a way to fix the NFS
+This was an interesting experiment but until a way to fix the NFS
 file share issue comes along, I probably won't be using Docker for any
 kind of front end development.
 
