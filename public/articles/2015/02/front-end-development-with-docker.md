@@ -122,18 +122,18 @@ After a bunch of fiddling around I came up with the following setup,
 which is actually rather simple (but maybe a bit hacky):
 
 ```
-myproject
-├── Dockerfile
-├── app
-│   ├── Dockerfile
-│   ├── Makefile
-│   ├── app.js
-│   ├── build
-│   │   ├── ...
-│   ├── package.json
-│   └── public
-│       ├── ...
-└── fig.yml
+myproject/
+|-- Dockerfile
+|-- app
+|   |-- Dockerfile
+|   |-- Makefile
+|   |-- app.js
+|   |-- build
+|   |   |-- ...
+|   |-- package.json
+|   |-- public
+|       |-- ...
+|-- fig.yml
 ```
 
 * The top level Dockerfile defines the development toolchain container
