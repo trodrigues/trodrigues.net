@@ -1,10 +1,10 @@
 .PHONY: post remove start build help
 
-clean:
-	rm -rf www
-
 help:
 	cat Makefile
+
+clean:
+	rm -rf www
 
 post:
 	./bin/makepost.js

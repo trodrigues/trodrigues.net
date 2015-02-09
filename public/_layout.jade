@@ -1,6 +1,14 @@
+if current.path[0] == 'articles'
+  - var currentPath = current.path[1]+'/'+current.path[2]+'/'+current.path[3];
+  - var article = public.articles._data.list.filter(function(val){return val.slug === currentPath})[0];
+
 doctype
 html
   head
+    if article
+      title= 'Tiago Rodrigues - '+article.title
+    else
+      title Tiago Rodrigues
     meta(name="viewport", content="initial-scale=1.0, width=device-width")
     link(rel="stylesheet", href="/css/main.css")
     link(rel="stylesheet", href="/css/prism.css")
@@ -27,8 +35,6 @@ html
           a(href="/about.html") about
     main
       if current.path[0] == 'articles'
-        - var currentPath = current.path[1]+'/'+current.path[2]+'/'+current.path[3];
-        - var article = public.articles._data.list.filter(function(val){return val.slug === currentPath})[0];
         if article
           != partial("_article", {article: article})
         else
