@@ -1,6 +1,11 @@
 {
   "list": [
     {
+      "title": "Framework Negativity",
+      "date": "2015-03-13T15:23:49.671Z",
+      "slug": "2015/03/framework-negativity"
+    },
+    {
       "title": "Front end development with docker",
       "date": "2015-02-08T16:10:52.932Z",
       "slug": "2015/02/front-end-development-with-docker"
