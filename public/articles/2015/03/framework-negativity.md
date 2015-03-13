@@ -42,6 +42,9 @@ The article also makes a point about React coupling views with models, which is 
 
 And yes, React couples behaviour with templates, but like Pete Hunt said on his [JSConf EU talk](https://youtu.be/x7cQ3mrcKaY?t=5m48s) these two things will generally be tightly coupled anyway. My data on this is anecdotal, but in my experience having different templates that can have different behavioural logic on top of them often becomes a maintenance burden. Generally what we want is a template that can render the same data in different places, and that should probably have no behaviour attached to it.
 
+**Update**: just after posting this saw a link to [this article](https://phuu.net/2014/12/03/concerning-separation.html) by Tom
+which argues this even better.
+
 And sure, this, like Hack or other FB technologies is part of their battle for engineers (hell, a week after I discussed React with Pete at JSConf I had an FB recruiter on my email), but I wouldn’t say that in itself is what leads to a walled garden. Business practices do.
 
 ### Misinformed criticism
