@@ -13,7 +13,7 @@ remove:
 	./bin/removepost.js
 
 start:
-	harp server
+	harp server --port 6050
 
 build:
 	harp compile
