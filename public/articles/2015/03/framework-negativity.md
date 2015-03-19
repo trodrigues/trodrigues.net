@@ -7,7 +7,6 @@ I’ve tried not to concern myself that much with acknowledging or providing an 
 <blockquote class="twitter-tweet" lang="en"><p><a href="https://t.co/rabms0g7q4">https://t.co/rabms0g7q4</a>&#10;&#10;a) you don’t need to use JSX with react&#10;b) it could potentially be made to render to web components</p>&mdash; Tiago Rodrigues (@trodrigues) <a href="https://twitter.com/trodrigues/status/576325992622518272">March 13, 2015</a></blockquote>
 
 <blockquote class="twitter-tweet" data-conversation="none" lang="en"><p>just another day of misinformed framework/library criticism ¯\_(ツ)_/¯</p>&mdash; Tiago Rodrigues (@trodrigues) <a href="https://twitter.com/trodrigues/status/576326107546447872">March 13, 2015</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 I decided to expand a bit on it with this post because of some of the replies I got and I’ll address both tweets separately.
 
@@ -37,6 +36,17 @@ The article makes it sound like you could not ever do both simultaneously and th
 The same article even mentions [React Canvas](https://github.com/flipboard/react-canvas) as an example of a React based tool that renders to something else, and mentions a combination of virtual-dom and Web Components as a possibility.
 
 Like I said before, it would be good if React was more modular, but the possibility of having it render to Web Components exists, and writing something in React doesn’t exactly lock you down to rendering things in a proprietary format that only something coming out of Facebook understands.
+
+
+Update: @Vjeux who works on React.js tweeted this at me after I posted this article:
+
+
+<blockquote class="twitter-tweet" data-conversation="none" lang="en"><p><a href="https://twitter.com/trodrigues">@trodrigues</a> &quot;React could eventually be made to render to Web Components&quot;. It&#39;s on the roadmap to have proper support for web components</p>&mdash; Vjeux (@Vjeux) <a href="https://twitter.com/Vjeux/status/576556164470710272">March 14, 2015</a></blockquote>
+
+<blockquote class="twitter-tweet" data-conversation="none" lang="en"><p><a href="https://twitter.com/trodrigues">@trodrigues</a> right now you can output custom tags but can&#39;t output custom attributes or events yet directly from the core</p>&mdash; Vjeux (@Vjeux) <a href="https://twitter.com/Vjeux/status/576556557762166784">March 14, 2015</a></blockquote>
+
+<blockquote class="twitter-tweet" data-conversation="none" lang="en"><p><a href="https://twitter.com/trodrigues">@trodrigues</a> BUT, you can make a wrapper using componentDidMount and componentWillReceiveProps and do manual mutations if you have to</p>&mdash; Vjeux (@Vjeux) <a href="https://twitter.com/Vjeux/status/576556721386217472">March 14, 2015</a></blockquote>
+
 
 The article also makes a point about React coupling views with models, which is a bit misleading. If anything, React couples [view with view models](http://en.wikipedia.org/wiki/Model_View_ViewModel), that is, the data a view needs to be rendered. The distinction matters.
 
