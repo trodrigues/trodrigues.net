@@ -2,11 +2,12 @@
   "name": "trodrigues.net",
   "version": "0.0.0",
   "description": "",
-  "bin": {
-    "makepost": "bin/makepost.js"
-  },
   "private": true,
   "scripts": {
+    "makepost": "./bin/makepost.js",
+    "remove": "./bin/removepost.js",
+    "clean": "rm -rf www",
+    "start": "harp server --port 6050",
     "build": "harp compile && npm run-script rssfeed",
     "rssfeed": "json2rss public/articles/_data.json www/feed.xml --title 'Tiago Rodrigues blog' --feedUrl 'http://trodrigues.net/feed.xml' --siteUrl='http://trodrigues.net' --author='Tiago Rodrigues' --itemSuffix='.html' --itemPrefix='articles/' --itemsPath='www/articles' --itemSelector='article section'"
   },
