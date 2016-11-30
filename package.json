@@ -7,7 +7,8 @@
     "build": "",
     "prod": "node server.js",
     "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint server.js",
+    "test": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,11 @@
     "hapi": "^16.0.0"
   },
   "devDependencies": {
+    "eslint": "^3.11.1",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-react": "^6.7.1",
+    "eslint-plugin-standard": "^2.0.1",
     "nodemon": "^1.11.0"
   }
 }

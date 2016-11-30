@@ -1,0 +1,19 @@
+{
+    "extends": "standard",
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "plugins": [
+        "standard",
+        "promise",
+        "react"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true
+        },
+        "sourceType": "module"
+    }
+}
