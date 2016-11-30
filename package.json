@@ -4,28 +4,25 @@
   "description": "",
   "private": true,
   "scripts": {
-    "makepost": "./bin/makepost.js",
-    "remove": "./bin/removepost.js",
-    "clean": "rm -rf www",
-    "start": "harp server --port 6050",
-    "build": "harp compile && npm run-script rssfeed",
-    "rssfeed": "json2rss public/articles/_data.json www/feed.xml --title 'Tiago Rodrigues blog' --feedUrl 'http://trodrigues.net/feed.xml' --siteUrl='http://trodrigues.net' --author='Tiago Rodrigues' --itemSuffix='.html' --itemPrefix='articles/' --itemsPath='www/articles' --itemSelector='article section'"
+    "build": "",
+    "prod": "node server.js",
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/trodrigues/trodrigues.net.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "",
   "bugs": {
     "url": "https://github.com/trodrigues/trodrigues.net/issues"
   },
   "homepage": "https://github.com/trodrigues/trodrigues.net",
   "dependencies": {
-    "optimist": "~0.6.0",
-    "to-slug-case": "~0.1.2",
-    "mkdirp": "~0.3.5",
-    "sync-prompt": "^0.4.1",
-    "cli-table": "^0.3.0"
+    "hapi": "^16.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }

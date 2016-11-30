@@ -1,12 +1,6 @@
-*.swp
-*.pyc
-.DS_Store
-.htaccess
-.idea
-trunk
-target
 node_modules
 npm-debug.log
+Dockerfile
 
 # Logs
 logs

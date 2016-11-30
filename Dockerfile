@@ -1,6 +1,8 @@
-FROM node:0.10
-RUN mkdir /src
-WORKDIR /src
-COPY * /src/
-RUN npm install
-CMD npm start
+FROM node:6-alpine
+RUN apk update && apk add build-base && apk add python
+RUN mkdir /app
+COPY . /app
+WORKDIR /app
+RUN npm install -g yarn
+RUN yarn install
+CMD ["yarn", "run", "prod"]
