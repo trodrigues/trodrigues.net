@@ -1,7 +1,8 @@
 const Hapi = require('hapi')
 const fs = require('fs')
 
-const PORT = process.env.NODE_ENV === 'production' ? 6011 : 6010
+const PRODUCTION = process.env.NODE_ENV === 'production'
+const PORT = PRODUCTION ? 6011 : 6010
 const LAYOUT_FILE = 'index.html'
 
 const server = new Hapi.Server()
@@ -23,6 +24,21 @@ server.route({
     })
   }
 })
+
+server.route({
+    method: 'GET',
+    path:'/build/{filename*}',
+    handler: (request, reply) => {
+        if (PRODUCTION) {
+          return reply
+          .file(`./build/${request.params.filename}`)
+        } else {
+          return reply
+          .redirect(`http://0.0.0.0:6020/build/${request.params.filename}`)
+        }
+    }
+})
+
 
 server.start((err) => {
   if (err) {
