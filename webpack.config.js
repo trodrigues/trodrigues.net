@@ -1,12 +1,12 @@
 module.exports = {
-  entry: './src/app.js',
+  entry: './client.js',
   output: {
     filename: 'bundle.js',
     publicPath: '/build/js/'
   },
-  devtool: process.env.NODE_ENV === 'production' ?
-      'source-map' :
-      'eval-source-map',
+  devtool: process.env.NODE_ENV === 'production'
+      ? 'source-map'
+      : 'eval-source-map',
   module: {
     loaders: [
       {
