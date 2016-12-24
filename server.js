@@ -42,7 +42,21 @@ server.register([
 
   server.route({
     method: 'GET',
-    path: '/',
+    path: '/build/{filename*}',
+    handler: (request, reply) => {
+      if (PRODUCTION) {
+        return reply
+        .file(`./build/${request.params.filename}`)
+      } else {
+        return reply
+        .redirect(`http://0.0.0.0:6020/build/${request.params.filename}`)
+      }
+    }
+  })
+
+  server.route({
+    method: 'GET',
+    path: '/{p*}',
     handler: function (request, reply) {
       match({ routes, location: request.raw.req.url }, (error, redirectLocation, renderProps) => {
         if (error) {
@@ -59,24 +73,10 @@ server.register([
             content: renderToString(<RouterContext {...renderProps} />)
           }))
         } else {
-          console.log('Not found', request.url)
+          console.log('Not found', request.raw.req.url)
           reply('Not found').code(404)
         }
       })
-    }
-  })
-
-  server.route({
-    method: 'GET',
-    path: '/build/{filename*}',
-    handler: (request, reply) => {
-      if (PRODUCTION) {
-        return reply
-        .file(`./build/${request.params.filename}`)
-      } else {
-        return reply
-        .redirect(`http://0.0.0.0:6020/build/${request.params.filename}`)
-      }
     }
   })
 })
