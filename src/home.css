@@ -1,0 +1,9 @@
+.stuff {
+    color: #00ffff;
+}
+
+@media (width < 600px) {
+  .stuff {
+    color: #00ff00;
+  }
+}

@@ -1,5 +1,9 @@
 import React from 'react'
+import CSSModules from 'react-css-modules'
+import styles from './home.css'
 
-export default function Home () {
-  return <p>home</p>
+function Home () {
+  return <p styleName='stuff'>home</p>
 }
+
+export default CSSModules(Home, styles)

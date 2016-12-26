@@ -1,21 +1,52 @@
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+
+const isProduction = process.env.NODE_ENV === 'production'
+const cssModulesConf = 'css?modules&minimize&importLoaders=1'
+const cssModulesConfDev =
+`${cssModulesConf}&sourceMap&localIdentName=[path]___[name]__[local]___[hash:base64:5]`
+
 module.exports = {
   entry: './client.js',
   output: {
-    filename: 'bundle.js',
-    publicPath: '/build/js/'
+    filename: 'js/bundle.js',
+    path: 'build',
+    publicPath: '/build/'
   },
-  devtool: process.env.NODE_ENV === 'production'
+
+  devtool: isProduction
       ? 'source-map'
       : 'eval-source-map',
+
   module: {
     loaders: [
       {
         test: /\.js?$/,
         exclude: /(node_modules|bower_components|dist)/,
         loader: 'babel'
+      },
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract(
+          'style',
+          (isProduction ? cssModulesConf : cssModulesConfDev) +
+          '!postcss'
+        )
       }
     ]
   },
+
+  postcss: function (webpack) {
+    return [
+      require('postcss-cssnext')()
+    ]
+  },
+
+  plugins: [
+    new ExtractTextPlugin('css/main.css', {
+      allChunks: true
+    })
+  ],
+
   devServer: {
     host: '0.0.0.0',
     port: 6020,
@@ -27,4 +58,5 @@ module.exports = {
     },
     stats: 'errors-only'
   }
+
 }

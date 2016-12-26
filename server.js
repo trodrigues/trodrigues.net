@@ -5,6 +5,7 @@ import good from 'good'
 import { renderToString } from 'react-dom/server'
 import { match, RouterContext } from 'react-router'
 import React from 'react'
+import 'css-modules-require-hook/preset'
 import routes from './src/routes'
 
 const PRODUCTION = process.env.NODE_ENV === 'production'
