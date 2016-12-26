@@ -6,7 +6,7 @@ const cssModulesConfDev =
 `${cssModulesConf}&sourceMap&localIdentName=[path]___[name]__[local]___[hash:base64:5]`
 
 module.exports = {
-  entry: './client.js',
+  entry: './bin/client.js',
   output: {
     filename: 'js/bundle.js',
     path: 'build',

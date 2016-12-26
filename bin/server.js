@@ -1,26 +1,20 @@
 import { Server } from 'hapi'
-import { readFileSync } from 'fs'
 import inert from 'inert'
 import good from 'good'
 import { renderToString } from 'react-dom/server'
 import { match, RouterContext } from 'react-router'
 import React from 'react'
 import 'css-modules-require-hook/preset'
-import routes from './src/routes'
+import layoutTemplate from '../src/layoutTemplate'
+import routes from '../src/routes'
 
 const PRODUCTION = process.env.NODE_ENV === 'production'
 const PORT = PRODUCTION ? 6011 : 6010
-const LAYOUT_FILE = 'index.html'
 
 const server = new Server()
 server.connection({
   port: PORT
 })
-
-const layoutFile = readFileSync(LAYOUT_FILE, 'utf8')
-/* eslint-disable no-new-func */
-const layoutTemplate = new Function('o', 'return `' + layoutFile + '`')
-/* eslint-enable no-new-func */
 
 server.register([
   inert,

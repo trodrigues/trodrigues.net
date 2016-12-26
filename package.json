@@ -4,11 +4,11 @@
   "description": "",
   "private": true,
   "scripts": {
-    "server:dev": "nodemon --exec babel-node server.js",
-    "server:prod": "NODE_ENV=production babel-node server.js",
+    "server:dev": "nodemon --exec babel-node bin/server.js",
+    "server:prod": "NODE_ENV=production babel-node bin/server.js",
     "client:dev": "webpack-dev-server",
     "client:build": "NODE_ENV=production webpack -p",
-    "lint": "eslint *.js src/*.js src/**/*.js",
+    "lint": "eslint *.js src/*.js src/**/*.js bin/*.js",
     "test": "npm run lint"
   },
   "repository": {
@@ -24,6 +24,7 @@
   "dependencies": {
     "babel-cli": "^6.18.0",
     "css-modules-require-hook": "^4.0.5",
+    "findit": "^2.0.0",
     "good": "^7.1.0",
     "good-console": "^6.3.1",
     "good-squeeze": "^5.0.1",
