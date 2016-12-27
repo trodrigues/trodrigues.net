@@ -5,15 +5,17 @@ import { renderToString } from 'react-dom/server'
 import { match, RouterContext } from 'react-router'
 import React from 'react'
 import 'css-modules-require-hook/preset'
-import layoutTemplate from '../src/layoutTemplate'
+import config from '../config'
+import createLayoutTemplate from '../src/createLayoutTemplate'
+import getTreeTitle from '../src/getTreeTitle'
 import routes from '../src/routes'
 
 const PRODUCTION = process.env.NODE_ENV === 'production'
-const PORT = PRODUCTION ? 6011 : 6010
+const layoutTemplate = createLayoutTemplate(config.layoutTemplate)
 
 const server = new Server()
 server.connection({
-  port: PORT
+  port: config.port
 })
 
 server.register([
@@ -35,6 +37,7 @@ server.register([
 ], (err) => {
   if (err) { throw err }
 
+  // assets route
   server.route({
     method: 'GET',
     path: '/build/{filename*}',
@@ -44,7 +47,7 @@ server.register([
         .file(`./build/${request.params.filename}`)
       } else {
         return reply
-        .redirect(`http://0.0.0.0:6020/build/${request.params.filename}`)
+        .redirect(`http://0.0.0.0:${config.assetsDevPort}/build/${request.params.filename}`)
       }
     }
   })
@@ -61,10 +64,10 @@ server.register([
           console.log('info', 'Redirecting', redirectLocation)
           reply.redirect(redirectLocation.pathname + redirectLocation.search)
         } else if (renderProps) {
-          console.log('Serving', request.url)
+          console.log('Serving', request.raw.req.url)
 
           reply(layoutTemplate({
-            title: `Tiago's page`,
+            title: getTreeTitle(config.baseTitle, renderProps.components),
             content: renderToString(<RouterContext {...renderProps} />)
           }))
         } else {

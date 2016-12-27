@@ -1,9 +1,10 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+var config = require('./config').default
 
 const isProduction = process.env.NODE_ENV === 'production'
 const cssModulesConf = 'css?modules&minimize&importLoaders=1'
 const cssModulesConfDev =
-`${cssModulesConf}&sourceMap&localIdentName=[path]___[name]__[local]___[hash:base64:5]`
+`${cssModulesConf}&sourceMap&localIdentName=${config.cssModulesScopedName}`
 
 module.exports = {
   entry: './bin/client.js',

@@ -5,12 +5,15 @@ import 'css-modules-require-hook/preset'
 import { writeFileSync, mkdirSync } from 'fs'
 import path from 'path'
 import findit from 'findit'
-import layoutTemplate from '../src/layoutTemplate'
+import config from '../config'
+import createLayoutTemplate from '../src/createLayoutTemplate'
+import getTreeTitle from '../src/getTreeTitle'
 import routes from '../src/routes'
 
 const sourcePath = process.argv[2]
 const destPath = process.argv[3]
 const finder = findit(sourcePath)
+const layoutTemplate = createLayoutTemplate(config.layoutTemplate)
 
 finder.on('file', (filePath, stat) => {
   if (path.extname(filePath) === '.md') {
@@ -72,10 +75,10 @@ function renderRoute ({
     } else if (redirectLocation) {
       console.log('info', 'Redirecting', redirectLocation)
     } else if (renderProps) {
-      console.log('Rendering', url)
+      console.log('Rendering', url, renderProps)
 
       const content = layoutTemplate({
-        title: `Tiago's page`,
+        title: getTreeTitle(config.baseTitle, renderProps.components),
         content: renderToString(<RouterContext {...renderProps} />)
       })
       writeFileSync(
