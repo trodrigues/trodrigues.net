@@ -1,0 +1,28 @@
+body {
+  width: 650px;
+  padding-top: 40px;
+  padding-left: 50px;
+  font-family: Roboto, Calibri, "Bitstream Vera Sans", sans-serif;
+  color: #22639D;
+  background-color: #FFF3E1;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    width: auto;
+    padding-top: 0;
+    padding-left: 0;
+  }
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+a {
+  color: #FAB09A;
+}
+
+a:visited {
+  color: #C6B8BA;
+}
