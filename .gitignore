@@ -7,3 +7,4 @@ lib-cov
 coverage
 .lock-wscript
 build
+_site

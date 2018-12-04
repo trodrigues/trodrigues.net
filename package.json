@@ -1,0 +1,25 @@
+{
+  "name": "trodrigues.net",
+  "version": "1.0.0",
+  "description": "Tiago Rodrigues personal website",
+  "main": "",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "clean": "rimraf _site"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trodrigues/trodrigues.net.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trodrigues/trodrigues.net/issues"
+  },
+  "homepage": "https://github.com/trodrigues/trodrigues.net#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.6.0",
+    "rimraf": "^2.6.2"
+  }
+}
