@@ -6,5 +6,5 @@ layout: layout.njk
   <section>
     {{content | safe}}
   </section>
-  <p class="time">Updated on <time datetime="{{ post.date | htmlDateString }}">{{date | readableDate}}</time></p>
+  <p class="time">Updated on <time datetime="{{ post.date | htmlDateString }}">{{page.date | readableDate}}</time></p>
 </article>

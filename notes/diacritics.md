@@ -1,7 +1,7 @@
 ---
 layout: note
 title: Diacritics
-date: 2018-12-05
+date: Last Modified
 tags: ['tips', 'macosx', 'unicode']
 ---
 
