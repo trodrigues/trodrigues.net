@@ -1,0 +1,10 @@
+---
+layout: layout.njk
+---
+<article class="note">
+  <h1>{{title}}</h1>
+  <section>
+    {{content | safe}}
+  </section>
+  <p class="time">Updated on <time datetime="{{ post.date | htmlDateString }}">{{date | readableDate}}</time></p>
+</article>

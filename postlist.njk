@@ -1,0 +1,13 @@
+---
+layout: layout.njk
+permalink: /posts/
+---
+
+<ul reversed class="postlist" style="counter-reset: start-from {{ collections.posts.length + 1 }}">
+{% for post in collections.posts | reverse %}
+  <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
+    <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+    <a href="{{ post.url | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+  </li>
+{% endfor %}
+</ul>

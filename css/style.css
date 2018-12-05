@@ -1,6 +1,7 @@
 :root {
   --main-text: rgb(243, 243, 243);
   --main-background:  rgb(104, 104, 104);
+  --darkened-text: rgb(223, 223, 223);
   --link: hsl(14, 91%, 79%);
   --link-visited: hsl(14, 51%, 74%);
   --separator: rgb(150, 150, 150);
@@ -8,8 +9,9 @@
 
 body {
   width: 650px;
-  padding-top: 40px;
-  padding-left: 50px;
+  padding-top: 2.5em;
+  padding-left: 2.5em;
+  padding-bottom: 5em;
   font-family: 'Rubik', sans-serif;
   font-size: 18px;
   color: var(--main-text);
@@ -22,6 +24,7 @@ body {
     width: auto;
     padding-top: 0;
     padding-left: 0;
+    padding-bottom: 2em;
     font-size: 16px;
   }
 }
@@ -56,14 +59,16 @@ nav li a:hover {
   text-decoration: underline;
 }
 
-nav li:after {
+nav li:after,
+.vertical-separator:after {
   content: '/';
   color: var(--separator);
   margin-left: 0.7em;
   margin-right: 0.4em;
 }
 
-nav li:last-child:after {
+nav li:last-child:after,
+.vertical-separator:last-child:after {
   content: ''
 }
 
@@ -72,4 +77,28 @@ hr {
   border: 0;
   margin: 20px 0px 30px;
   border-top: 1px solid var(--separator);
+}
+
+.post time, .time {
+  font-style: italic;
+  font-size: 0.8em;
+  color: var(--darkened-text)
+}
+
+.notelist-item {
+  margin-bottom: 1.4em;
+}
+
+.notelist-tags {
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+  font-size: 0.8em;
+  line-height: 1.1em;
+  opacity: 0.5;
+  list-style: none;
+}
+
+.notelist-tags li {
+  display: inline;
 }

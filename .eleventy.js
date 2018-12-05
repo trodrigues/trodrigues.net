@@ -6,7 +6,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
 
-  eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
+  eleventyConfig.addLayoutAlias("post", "post.njk");
 
   eleventyConfig.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
@@ -26,12 +26,18 @@ module.exports = function(eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toFormat('yyyy-LL-dd');
   });
 
-  // only content in the `posts/` directory
   eleventyConfig.addCollection("posts", function(collection) {
     return collection.getFilteredByGlob("./posts/*").sort(function(a, b) {
       return a.date - b.date;
     });
   });
+
+  eleventyConfig.addCollection("notes", function(collection) {
+    return collection.getFilteredByGlob("./notes/*").sort(function(a, b) {
+      return a.date - b.date;
+    });
+  });
+
 
   //eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
 
