@@ -27,6 +27,12 @@ body {
     padding-bottom: 2em;
     font-size: 16px;
   }
+
+  code {
+    width: auto;
+    display: block;
+    overflow: auto;
+  }
 }
 
 li {
