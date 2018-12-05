@@ -2,10 +2,10 @@ body {
   width: 650px;
   padding-top: 40px;
   padding-left: 50px;
-  font-family: "Open Sans", Calibri, "Bitstream Vera Sans", sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-size: 18px;
-  color: rgb(241, 254, 255);
-  background-color: rgb(85, 85, 85);
+  color: rgb(243, 243, 243);
+  background-color: rgb(104, 104, 104);
   line-height: 1.8em;
 }
 
