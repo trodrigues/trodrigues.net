@@ -13,7 +13,6 @@ I spend way too much time playing video games and finding new music.
 
 There's not a lot on this page, but the following links are where I generally post things online for others to see.
 
-* [Notion](https://www.notion.so/Tiago-s-shared-documents-09818212546c47948a19fad821680b29) - This is where I write things, long form or not, posts, tips, etc. I use Notion heavily for note taking, work, and general life stuff. This is the page where I share some of those things with the world.
 * [Twitter](https://twitter.com/trodrigues) - I tweet a lot.
 * [Pinboard](https://pinboard.in/u:trodrigues) - I also bookmark a lot.
 * [Github](https://github.com/trodrigues) - Sometimes I share some code with the world.
