@@ -10,3 +10,4 @@ Mostly a way to test the notes section, but also a way of keeping up with what I
 * Add tags to these notes
 * Add list of tags on a sidebar on /notes/ (don't forget to make it responsive)
 * Test out syntax highlighting
+* Add an RSS feed
