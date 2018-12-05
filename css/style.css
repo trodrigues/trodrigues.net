@@ -1,11 +1,19 @@
+:root {
+  --main-text: rgb(243, 243, 243);
+  --main-background:  rgb(104, 104, 104);
+  --link: hsl(14, 91%, 79%);
+  --link-visited: hsl(14, 51%, 74%);
+  --separator: rgb(150, 150, 150);
+}
+
 body {
   width: 650px;
   padding-top: 40px;
   padding-left: 50px;
   font-family: 'Rubik', sans-serif;
   font-size: 18px;
-  color: rgb(243, 243, 243);
-  background-color: rgb(104, 104, 104);
+  color: var(--main-text);
+  background-color: var(--main-background);
   line-height: 1.8em;
 }
 
@@ -14,6 +22,7 @@ body {
     width: auto;
     padding-top: 0;
     padding-left: 0;
+    font-size: 16px;
   }
 }
 
@@ -22,9 +31,45 @@ li {
 }
 
 a {
-  color: hsl(14, 91%, 79%);
+  color: var(--link);
 }
 
 a:visited {
-  color: hsl(14, 51%, 74%);
+  color: var(--link-visited);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+}
+
+nav li a {
+  text-decoration: none;
+}
+
+nav li a:hover {
+  text-decoration: underline;
+}
+
+nav li:after {
+  content: '/';
+  color: var(--separator);
+  margin-left: 0.7em;
+  margin-right: 0.4em;
+}
+
+nav li:last-child:after {
+  content: ''
+}
+
+hr {
+  height: 0;
+  border: 0;
+  margin: 20px 0px 30px;
+  border-top: 1px solid var(--separator);
 }
