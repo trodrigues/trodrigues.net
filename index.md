@@ -10,7 +10,7 @@ My name's Tiago and I'm a software developer. I currently live in Berlin with my
 
 I do mostly JavaScript and frontend development, but have been all over the whole web stack over the years.
 
-Outside of work, I'm a video game nerd, a sci-fi nerd, and I spend a lot of time combing music blogs for new and exciting bands.
+I spend way too much time playing video games and finding new music.
 
 There's not a lot on this page, but the following links are where I generally post things online for others to see.
 
