@@ -22,9 +22,9 @@ li {
 }
 
 a {
-  color: #FAB09A;
+  color: hsl(14, 91%, 79%);
 }
 
 a:visited {
-  color: #C6B8BA;
+  color: hsl(14, 51%, 74%);
 }
