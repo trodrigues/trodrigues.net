@@ -1,6 +1,7 @@
 :root {
-  --main-text: rgb(243, 243, 243);
-  --main-background:  rgb(104, 104, 104);
+  --main-text:#6bbcff;
+  --code-text:hsl(207, 60%, 71%);
+  --main-background: rgba(37, 35, 63, 1);
   --darkened-text: rgb(223, 223, 223);
   --link: hsl(14, 91%, 79%);
   --link-visited: hsl(14, 51%, 74%);
@@ -8,15 +9,21 @@
 }
 
 body {
-  width: 650px;
+  width: 800px;
+  margin: 0 auto;
   padding-top: 2.5em;
   padding-left: 2.5em;
   padding-bottom: 5em;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 18px;
   color: var(--main-text);
   background-color: var(--main-background);
   line-height: 1.8em;
+}
+
+code {
+  font-family: 'Source Code Pro', monospace;
+  color: var(--code-text);
 }
 
 @media screen and (max-width: 700px) {
@@ -83,6 +90,10 @@ hr {
   border: 0;
   margin: 20px 0px 30px;
   border-top: 1px solid var(--separator);
+}
+
+.media-image {
+  text-align: center;
 }
 
 .post time, .time {

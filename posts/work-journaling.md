@@ -26,14 +26,18 @@ Here's some notes on what I'm doing:
 
 - At the start of each week, I create a weekly document. I name it after the week start date. Then structure it with subtitles for each day of the week.
 
-<img src="/img/journaling/template.png" width="500" />
+<div class="media-image">
+    <img src="/img/journaling/template.png" width="500" />
+</div>
 
 - I've created a simple template button, which creates a new document every week.
     - Start by creating a document like the picture above, which acts as a template
     - Create a page to hold the list of all weekly journals and type `/template` to create a new button
     - Name it whatever you want, and drag the document you created previously from your sidebar onto the "template" field in the Template Button config
 
-<img src="/img/journaling/list.png" width="500" />
+<div class="media-image">
+    <img src="/img/journaling/list.png" width="500" />
+</div>
 
 - On each day, write a todo list for what you plan to on that day.
     - Add bullet points for what you did that wasn’t planned.
