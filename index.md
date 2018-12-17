@@ -21,3 +21,5 @@ There's not a lot on this page, but the following links are where I generally po
 You can always contact me via twitter or at `hello at trodrigues dot net`
 
 Thanks for stopping by!
+
+Maybe I am testing something?
