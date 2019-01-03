@@ -1,0 +1,43 @@
+:root {
+  --main-text:#6bbcff;
+  --code-text:hsl(207, 60%, 71%);
+  --main-background: rgba(37, 35, 63, 1);
+  --darkened-text: rgb(223, 223, 223);
+  --link: hsl(14, 91%, 79%);
+  --link-visited: hsl(14, 51%, 74%);
+  --separator: rgb(150, 150, 150);
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: var(--main-background);
+  color: var(--main-text)
+}
+
+@media screen and (min-width: 700px) {
+  main {
+    width: 700px;
+    margin: 0 auto;
+  }
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.playlists > li > h2 {
+  border-bottom: 1px solid var(--separator);
+  color: var(--link)
+}
+
+.playlist > li {
+  margin-bottom: 0.5em;
+}
