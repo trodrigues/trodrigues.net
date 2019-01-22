@@ -1,11 +1,8 @@
-const CACHE_NAME = 'my-site-cache-v1';
+const CACHE_NAME = 'my-site-cache-v2';
 const urlsToCache = [
   './artistsbyplaylist.html',
   './styles.css',
   './client.js',
-  'https://fonts.googleapis.com/css?family=Lato',
-  'https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2',
-  'https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wXiWtFCc.woff2'
 ];
 
 self.addEventListener('install', (event) => {
