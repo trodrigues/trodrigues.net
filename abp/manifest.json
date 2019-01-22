@@ -1,0 +1,16 @@
+{
+  "short_name": "ABP",
+  "name": "Artists by Playlist",
+  "icons": [
+    {
+      "src": "/abp/favicon.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    }
+  ],
+  "start_url": "/abp/",
+  "background_color": "#25233f",
+  "display": "standalone",
+  "scope": "/abp/",
+  "theme_color": "#25233f"
+}

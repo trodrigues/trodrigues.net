@@ -1,8 +1,10 @@
-const CACHE_NAME = 'my-site-cache-v2';
+const CACHE_NAME = 'my-site-cache-v3';
 const urlsToCache = [
-  './artistsbyplaylist.html',
-  './styles.css',
-  './client.js',
+  '/abp/',
+  '/abp/favicon.png',
+  '/abp/styles.css',
+  '/abp/client.js',
+  '/abp/manifest.json'
 ];
 
 self.addEventListener('install', (event) => {
