@@ -1,6 +1,6 @@
-const CACHE_NAME = 'my-site-cache-v4';
+const CACHE_NAME = 'abp-1';
 const urlsToCache = [
-  '/abp/',
+  '/abp/index.html',
   '/abp/favicon.png',
   '/abp/styles.css',
   '/abp/client.js',
@@ -45,5 +45,20 @@ self.addEventListener('fetch', (event) => {
       })
     );
 });
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (cacheName !== CACHE_NAME) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+});
+
 
 // based on https://developers.google.com/web/fundamentals/primers/service-workers/
