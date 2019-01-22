@@ -11,7 +11,7 @@
 body {
   font-family: 'Lato', sans-serif;
   background: var(--main-background);
-  color: var(--main-text)
+  color: var(--main-text);
 }
 
 @media screen and (min-width: 700px) {
@@ -35,7 +35,8 @@ li {
 
 .playlists > li > h2 {
   border-bottom: 1px solid var(--separator);
-  color: var(--link)
+  color: var(--link);
+  cursor: pointer;
 }
 
 .playlist > li {
