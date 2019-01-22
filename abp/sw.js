@@ -1,4 +1,4 @@
-const CACHE_NAME = 'abp-3';
+const CACHE_NAME = 'abp-4';
 const urlsToCache = [
   '/abp/index.html',
   '/abp/favicon.png',
