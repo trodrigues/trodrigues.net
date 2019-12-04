@@ -1,4 +1,4 @@
-self.addEventListener("message", ev => {
+self.addEventListener("message", function(ev) {
   console.log('post message data', ev.data)
   self.fetch('/').then(function(response){
     return response.text().then(function(data){
