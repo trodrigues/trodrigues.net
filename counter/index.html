@@ -21,24 +21,32 @@
     <div>
       <p id="counter1">0</p>
       <button id="increment-counter1">First</button>
+      <input id="counter1-label" type="text"></input>
     </div>
     <div>
       <p id="counter2">0</p>
       <button id="increment-counter2">Second</button>
+      <input id="counter2-label" type="text"></input>
     </div>
     <div>
       <p id="counter3">0</p>
       <button id="increment-counter3">Third</button>
+      <input id="counter3-label" type="text"></input>
     </div>
     <script>
       Array.from(document.getElementsByTagName('button')).forEach(el => {
-        console.log(el)
         el.addEventListener('click', ev => {
           const id = ev.target.id;
-          console.log(id)
           const counter = document.getElementById(id.replace('increment-', ''));
           const count = parseInt(counter.innerHTML, 10);
           counter.innerHTML = count + 1;
+        })
+      });
+
+      Array.from(document.getElementsByTagName('input')).forEach(el => {
+        el.addEventListener('keyup', ev => {
+          const id = ev.target.id.replace('-label', '');
+          document.getElementById('increment-'+id).innerHTML = event.target.value;
         })
       });
     </script>
