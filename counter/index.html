@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        display: flex;
+        flex-direction: row;
+        font-size: 30px;
+      }
+      body > div {
+        width: 300px;
+        text-align: center;
+      }
+      button {
+        width: 200px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p id="counter1">0</p>
+      <button id="increment-counter1">First</button>
+    </div>
+    <div>
+      <p id="counter2">0</p>
+      <button id="increment-counter2">Second</button>
+    </div>
+    <div>
+      <p id="counter3">0</p>
+      <button id="increment-counter3">Third</button>
+    </div>
+    <script>
+      Array.from(document.getElementsByTagName('button')).forEach(el => {
+        console.log(el)
+        el.addEventListener('click', ev => {
+          const id = ev.target.id;
+          console.log(id)
+          const counter = document.getElementById(id.replace('increment-', ''));
+          const count = parseInt(counter.innerHTML, 10);
+          counter.innerHTML = count + 1;
+        })
+      });
+    </script>
+  </body>
+</html>
