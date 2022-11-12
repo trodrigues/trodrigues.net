@@ -19,9 +19,9 @@
   },
   "homepage": "https://github.com/trodrigues/trodrigues.net#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.6.0",
-    "@11ty/eleventy-plugin-rss": "^1.0.3",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.0",
-    "rimraf": "^2.6.2"
+    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
+    "rimraf": "^3.0.2"
   }
 }
