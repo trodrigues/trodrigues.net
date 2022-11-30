@@ -19,10 +19,10 @@ When I'm not thinking about all of that stuff, you'll likely find me playing vid
 
 I'll occasionally post some thoughts on this website, but the following links are where I generally post things online for others to see.
 
-* [Mastodon](https://icosahedron.website/@trodrigues) - Random short form thoughts.
-* [Pinboard](https://pinboard.in/u:trodrigues) - I bookmark a lot.
-* [Github](https://github.com/trodrigues) - Sometimes I share some code with the world.
-* [LinkedIn](https://www.linkedin.com/in/tmcrodrigues/) - What I've been doing with my professional life.
+* <a href="https://icosahedron.website/@trodrigues" rel="me">Mastodon</a> - Random short form thoughts.
+* <a href="https://pinboard.in/u:trodrigues" rel="me">Pinboard</a> - I bookmark a lot.
+* <a href="https://github.com/trodrigues" rel="me">Github</a> - Sometimes I share some code with the world.
+* <a href="https://www.linkedin.com/in/tmcrodrigues/" rel="me">LinkedIn</a> - What I've been doing with my professional life.
 
 You can always contact me via twitter or at `hello at trodrigues dot net`
 
