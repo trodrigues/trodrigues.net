@@ -7,10 +7,10 @@ tags: ['tips', 'arm64', 'hetzner', 'freebsd']
 
 Some quick and dirty instructions on how to install FreeBSD on Hetzner Cloud's CAX11.
 
-- Get the latest raw image from https://download.freebsd.org/releases/VM-IMAGES/
+- Get the latest raw image from [https://download.freebsd.org/releases/VM-IMAGES/](https://download.freebsd.org/releases/VM-IMAGES/)
 - Uncompress with `unxz -T0`
 - Install qemu
-- Run it in qemu following the instructions here: https://wiki.freebsd.org/arm64/QEMU
+- Run it in qemu following the instructions here: [https://wiki.freebsd.org/arm64/QEMU](https://wiki.freebsd.org/arm64/QEMU)
 - telnet into qemu image
 - Inside image:
     - `sysrc sshd_enable=YES`
@@ -29,5 +29,5 @@ Some quick and dirty instructions on how to install FreeBSD on Hetzner Cloud's C
 
 References:
 
-- https://gist.github.com/strfry/b9383f5f823bf508b7b3a858a6cb3168
-- https://gist.github.com/pandrewhk/2d62664bfb74a504b7f4a894fc85eb97
+- [https://gist.github.com/strfry/b9383f5f823bf508b7b3a858a6cb3168](https://gist.github.com/strfry/b9383f5f823bf508b7b3a858a6cb3168)
+- [https://gist.github.com/pandrewhk/2d62664bfb74a504b7f4a894fc85eb97](https://gist.github.com/pandrewhk/2d62664bfb74a504b7f4a894fc85eb97)
