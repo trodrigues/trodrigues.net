@@ -5,8 +5,6 @@ date: Last Modified
 tags: ['tips', 'arm64', 'hetzner', 'freebsd']
 ---
 
-## Setting up FreeBSD on arm64 on hetzner
-
 Some quick and dirty instructions on how to install FreeBSD on Hetzner Cloud's CAX11.
 
 - Get the latest raw image from https://download.freebsd.org/releases/VM-IMAGES/
