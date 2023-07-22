@@ -1,3 +1,10 @@
+---
+layout: note
+title: Setting up FreeBSD on arm64 on hetzner
+date: Last Modified
+tags: ['tips', 'arm64', 'hetzner', 'freebsd']
+---
+
 ## Setting up FreeBSD on arm64 on hetzner
 
 Some quick and dirty instructions on how to install FreeBSD on Hetzner Cloud's CAX11.
