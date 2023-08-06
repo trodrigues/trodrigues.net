@@ -8,11 +8,11 @@ jobs:
       - run: npm ci
       - run: npm run build
       - name: Copy content
-        uses: garygrossgarten/github-action-scp@release
+        uses: appleboy/scp-action@v0.1.4
         with:
-          local: _site
-          remote: /var/www/trodrigues.net
+          source: _site
+          target: /var/www/trodrigues.net
           host: ${{ secrets.HOST }}
-          privateKey: ${{ secrets.PRIVATE_KEY}}
+          key: ${{ secrets.PRIVATE_KEY}}
           passphrase: ${{secrets.PASSPHRASE}}
-          rmRemote: true
+          rm: true
