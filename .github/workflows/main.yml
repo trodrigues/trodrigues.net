@@ -1,0 +1,25 @@
+name: trodrigues.net deployments
+on: [push]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: setup demo
+        run: |
+          mkdir test
+          touch test/oof.txt
+          touch test/.dot.txt
+      - name: Copy folder content recursively to remote (clean directory)
+        uses: ./
+        with:
+          local: test
+          remote: scp/directory
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.SSH_USER }}
+          password: ${{ secrets.PASSWORD }}
+          privateKey: ${{ secrets.PRIVATE_KEY}}
+          rmRemote: true
+          dotfiles: true
