@@ -12,6 +12,7 @@ jobs:
         with:
           source: _site
           target: /var/www/trodrigues.net
+          username: ${{ secrets.USERNAME }}
           host: ${{ secrets.HOST }}
           key: ${{ secrets.PRIVATE_KEY}}
           passphrase: ${{secrets.PASSPHRASE}}
