@@ -10,7 +10,7 @@ jobs:
       - name: Copy content
         uses: appleboy/scp-action@v0.1.4
         with:
-          source: "_site/*"
+          source: _site
           target: /var/www/trodrigues.net
           username: ${{ secrets.USERNAME }}
           host: ${{ secrets.HOST }}
