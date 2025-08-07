@@ -4,7 +4,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: npm ci
       - run: npm run build
       - name: Copy content
@@ -14,6 +14,7 @@ jobs:
           target: /var/www/trodrigues.net
           username: ${{ secrets.USERNAME }}
           host: ${{ secrets.HOST }}
+          port: ${{ secrets.PORT }}
           key: ${{ secrets.PRIVATE_KEY}}
           passphrase: ${{secrets.PASSPHRASE}}
           rm: true
